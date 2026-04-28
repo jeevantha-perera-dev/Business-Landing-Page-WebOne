@@ -181,3 +181,39 @@
     border-radius: 10px;
     width: 300px;
 }
+
+.about {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./Assets/about3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    justify-content: center;
+}
+
+.aboutTop {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+}
+
+.aboutTop h2 {
+    font-size: 35px;
+}
+
+.aboutTop p {
+    padding: 10px;
+    max-width: 550px;
+}
+
+.aboutContent img {
+    border: #00ddff solid 2px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.abt1 {
+    width: 300px;
+    height: auto;
+}

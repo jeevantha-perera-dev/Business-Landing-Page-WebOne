@@ -84,23 +84,8 @@
     cursor: pointer;
 }
 
-.heroBtnSecondary {
-    background-color: #00ddff;
-    color: rgb(0, 0, 0);
-    margin-right: 1rem;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-}
 
 .heroBtnPrimary:hover {
-    transform: translateY(-3px);
-}
-
-.heroBtnSecondary:hover {
     transform: translateY(-3px);
 }
 
@@ -195,25 +180,169 @@
     display: flex;
     padding: 10px;
     justify-content: space-between;
+    margin-left: 20px;
 
 }
 
 .aboutTop h2 {
-    font-size: 35px;
+    font-size: 40px;
+    margin-left: 40px;
+    margin-top: 50px;
+    font-weight: bold;
 }
 
 .aboutTop p {
     padding: 10px;
+    margin-top: 50px;
     max-width: 550px;
 }
 
 .aboutContent img {
     border: #00ddff solid 2px;
-    border-radius: 10px;
+    margin-left: 40px;
+}
+
+
+.aboutContentBottom {
+    display: flex;
+    gap: 20px;
     align-items: center;
+    padding: 40px;
 }
 
 .abt1 {
+    width: 60%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.abt2 {
+    width: 30%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.contact-hero {
+    background-image:
+        radial-gradient(circle at center, rgba(0, 251, 255, 0.1), transparent),
+        linear-gradient(180deg, rgba(10, 25, 47, 0.8), rgba(2, 12, 27, 0.9)),
+        url("./Assets/callagent.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.overlayContact h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.contact {
+    border: 2px solid aqua;
+}
+
+.contact-body {
+    color: #ffffff;
+    background: linear-gradient(180deg,
+            #0a192f 0%,
+            #112240 40%,
+            #020c1b 100%);
+
+    --neon-blue: #00d2ff;
+    --neon-purple: #9d50bb;
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+.contact-body .container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 50px auto;
+    gap: 50px;
+}
+
+.info-col,
+.form-col {
+    flex: 1;
+}
+
+input[type="text"] {
     width: 300px;
-    height: auto;
+    padding: 12px;
+    margin: 8px 0 20px;
+    border: 1px solid aqua;
+    border-radius: 4px;
+}
+
+input[type="email"] {
+    width: 300px;
+    padding: 12px;
+    margin: 8px 0 20px;
+    border: 1px solid aqua;
+    border-radius: 4px;
+}
+
+input[type="number"] {
+    width: 300px;
+    padding: 12px;
+    margin: 8px 0 20px;
+    border: 1px solid aqua;
+    border-radius: 4px;
+}
+
+input[type="textarea"] {
+    width: 300px;
+    height: 100px;
+    padding: 12px;
+    margin: 8px 0 20px;
+    border: 1px solid aqua;
+    border-radius: 4px;
+}
+
+.form-fields {
+    margin-bottom: 20px;
+    margin-left: 120px;
+}
+
+.form-buttons {
+    margin-top: 20px;
+    margin-left: 120px;
+    display: flex;
+    gap: 10px;
+}
+
+.form-col p {
+    margin-bottom: 20px;
+    margin-left: 120px;
+}
+
+
+.info-col h3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.info-col p {
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #00ddff;
+}
+
+.contact-body h2 {
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.info-col p strong {
+    color: #9ef2ff;
 }

@@ -346,3 +346,67 @@ input[type="textarea"] {
 .info-col p strong {
     color: #9ef2ff;
 }
+
+.footer {
+    background-color: #020c1b;
+    color: #ffffff;
+    padding: 40px 10%;
+    border-top: 1px solid aqua;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: aqua;
+    transition: 0.3s;
+}
+
+.footer-links ul li {
+    margin-top: 10px;
+}
+
+.footer-links h4 {
+    font-size: 20px;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+.footer-top {
+    padding: 20px;
+}
+
+.footer-top p {
+    margin-top: 10px;
+    color: aqua;
+}
+
+.footer-top h3 {
+    font-size: 40px;
+}
+
+
+.footer-links {
+    padding: 20px;
+}

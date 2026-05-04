@@ -410,3 +410,8 @@ input[type="textarea"] {
 .footer-links {
     padding: 20px;
 }
+
+.navLinks a.active {
+    color: #ffffff;
+    border-bottom: 2px solid aqua;
+}

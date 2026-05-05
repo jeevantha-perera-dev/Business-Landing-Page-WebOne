@@ -39,3 +39,17 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+function submitForm() {
+    event.preventDefault();
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let number = document.getElementById("number").value;
+    let message = document.getElementById("message").value;
+
+    if (name == "" || email == "" || number == "" || message == "") {
+        document.getElementById("demo").innerHTML = "All fields are required!";
+    } else {
+        document.getElementById("demo").innerHTML = "Thank you for contacting us, " + name + "!";
+    }
+}

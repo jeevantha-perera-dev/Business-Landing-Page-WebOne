@@ -68,7 +68,7 @@
 
         </div>
     </section>
-    <section id="contact" class="contact">
+    <section id="contacts" class="contact">
         <section class="contact-hero">
             <div class="overlayContact">
                 <h1>Contact Us</h1>
@@ -85,26 +85,26 @@
                     <p>123 Tech Park Drive<br>Suite 400<br>San Francisco, CA 94105</p>
                 </div>
                 <div class="form-col">
-                    <p>Please Note: All fields are required.</p>
+                    <p id="demo">Please Note: All fields are required.</p>
                     <form>
                         <div class="form-fields">
                             <label>Full Name</label><br>
-                            <input type="text" placeholder="John Doe">
+                            <input id="name" type="text" placeholder="John Doe">
                         </div>
                         <div class="form-fields">
                             <label>Email</label><br>
-                            <input type="email" placeholder="johndoe@email.com">
+                            <input id="email" type="email" placeholder="johndoe@email.com">
                         </div>
                         <div class="form-fields">
                             <label>Phone Number</label><br>
-                            <input type="number" placeholder="+941234567890">
+                            <input type="number" id="number" placeholder="+941234567890">
                         </div>
                         <div class="form-fields">
                             <label>Message</label><br>
-                            <input type="textarea" cols="30" rows="10" placeholder="How can we help you?">
+                            <input id="message" type="textarea" cols="30" rows="10" placeholder="How can we help you?">
                         </div>
                         <div class="form-buttons">
-                            <button type="submit" class="heroBtnPrimary">Submit</button>
+                            <button type="submit" onclick="submitForm(event)" class="heroBtnPrimary">Submit</button>
                             <button class="heroBtnPrimary" type="reset">Clear</button>
                         </div>
 
@@ -125,7 +125,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contacts">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-bottom">

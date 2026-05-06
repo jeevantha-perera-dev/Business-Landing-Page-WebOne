@@ -86,7 +86,7 @@
                 </div>
                 <div class="form-col">
                     <p id="demo">Please Note: All fields are required.</p>
-                    <form>
+                    <form id="form-id" onsubmit="emailSend(); reset(); return false;">
                         <div class="form-fields">
                             <label>Full Name</label><br>
                             <input id="name" type="text" placeholder="John Doe">
@@ -101,11 +101,11 @@
                         </div>
                         <div class="form-fields">
                             <label>Message</label><br>
-                            <input id="message" type="textarea" cols="30" rows="10" placeholder="How can we help you?">
+                            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
                         </div>
                         <div class="form-buttons">
                             <button type="submit" onclick="submitForm(event)" class="heroBtnPrimary">Submit</button>
-                            <button class="heroBtnPrimary" type="reset">Clear</button>
+                            <button class="heroBtnPrimary" type="button" onclick="clearForm()">Clear</button>
                         </div>
 
                     </form>

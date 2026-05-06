@@ -53,3 +53,12 @@ function submitForm() {
         document.getElementById("demo").innerHTML = "Thank you for contacting us, " + name + "!";
     }
 }
+
+function clearForm() {
+    document.getElementById("demo").innerHTML = "Please Note: All fields are required.";
+    document.getElementById("form-id").reset();
+}
+
+function emailSend() {
+
+}

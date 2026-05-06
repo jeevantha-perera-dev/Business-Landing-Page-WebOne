@@ -114,7 +114,7 @@
     justify-content: flex-start;
 }
 
-.trust {
+/* .trust {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./Assets/blackhole.webp");
     background-size: cover;
     background-position: center;
@@ -222,6 +222,171 @@
     height: 550px;
     object-fit: cover;
     border-radius: 30px;
+} */
+
+.trust {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./Assets/blackhole.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid aqua;
+    min-height: 80vh;
+    text-align: center;
+    padding: 10rem 10%;
+    color: rgb(255, 255, 255);
+}
+
+.trustContent h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.trustContent h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #00ddff;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+/* NEW CARD STYLE */
+.testimo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimoContent {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 20px;
+    width: 280px;
+    padding: 30px 20px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimoContent::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+    top: -50%;
+    left: -50%;
+    transform: rotate(25deg);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.testimoContent:hover::before {
+    opacity: 1;
+}
+
+.testimoContent:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: #00ddff;
+    box-shadow: 0 0 25px rgba(0, 221, 255, 0.3);
+}
+
+.testimoContent img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+.trustContent p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* ================= ABOUT (UPGRADED) ================= */
+.about {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./Assets/about3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #00ddff;
+    filter: blur(150px);
+    opacity: 0.2;
+    top: 20%;
+    left: 10%;
+}
+
+/* TEXT AREA */
+.aboutTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    gap: 40px;
+}
+
+.aboutTop h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.aboutTop p {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 500px;
+}
+
+/* IMAGE LAYOUT */
+.aboutContentBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 10%;
+    position: relative;
+}
+
+.abt1 {
+    width: 55%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.abt2 {
+    width: 25%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    position: absolute;
+    right: 10%;
+    top: 40px;
+    z-index: 3;
+    box-shadow: 0 0 30px rgba(0, 221, 255, 0.3);
+    transition: 0.4s;
+}
+
+.aboutContentBottom:hover .abt1 {
+    transform: scale(1.05);
+}
+
+.aboutContentBottom:hover .abt2 {
+    transform: translateY(-10px) scale(1.05);
 }
 
 .contact-hero {
@@ -310,6 +475,14 @@ input[type="textarea"] {
 .form-fields {
     margin-bottom: 20px;
     margin-left: 120px;
+}
+
+.form-fields textarea {
+    width: 300px;
+    padding: 12px;
+    margin: 8px 0 20px;
+    border: 1px solid aqua;
+    border-radius: 4px;
 }
 
 .form-buttons {

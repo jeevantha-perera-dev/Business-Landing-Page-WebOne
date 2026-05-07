@@ -1,3 +1,13 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background: #000;
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,70 +15,52 @@
     font-family: 'Poppins', sans-serif;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
-    padding: 20px;
-    border-color: aqua;
-    border-width: 2px;
-    border-style: solid;
+    padding: 20px 8%;
+    background: #000;
+    border-bottom: 2px solid aqua;
+    position: relative;
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-    padding: 0 15px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
 }
 
 .navLinks {
     display: flex;
-    justify-content: space-between;
-    padding: 0 15px;
     list-style: none;
-    gap: 20px;
-}
-
-.navLinks a:hover {
-    color: #fff;
+    gap: 30px;
 }
 
 .navLinks li a {
     color: aqua;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1rem;
+    transition: 0.3s;
 }
 
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./Assets/SerenityColors.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: calc(300px + 15vh);
-    padding: 4rem 10%;
-    color: #ffffff;
-    gap: 1rem;
+.navLinks li a:hover {
+    color: white;
 }
 
-
-
-.heroContent h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    font-weight: 800;
-}
-
-.heroContent p {
-    font-size: 1.25rem;
-    opacity: 0.9;
-    margin-bottom: 2rem;
-    color: #bbbaba;
+/* HAMBURGER ICON */
+.menuToggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
 }
 
 
@@ -109,120 +101,63 @@
 .heroBtnGrp {
     display: flex;
     gap: 1rem;
-    padding: 1ren 0;
+    padding: 1rem 0;
     width: 100%;
     justify-content: flex-start;
 }
 
-/* .trust {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./Assets/blackhole.webp");
+
+.hero {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)),
+        url("./Assets/SerenityColors.jpg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid aqua;
-    min-height: 80vh;
-    text-align: center;
-    padding: 15rem 10%;
-    color: rgb(255, 255, 255);
-}
 
-.trustContent h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 5rem;
-}
-
-.testimo {
     display: flex;
     justify-content: space-between;
-}
-
-.testimo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 2px solid aqua;
-    margin: 10px;
-}
-
-.trustContent p {
-    font-size: 1.5rem;
-    opacity: 0.9;
-    margin-top: 1rem;
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
-.heroVisual img {
-    border-radius: 10px;
-}
-
-.testimoContent {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 20px;
-    border: 4px solid aquamarine;
-    border-radius: 10px;
-    width: 300px;
+
+    min-height: 100vh;
+
+    padding: 4rem 8%;
+
+    gap: 3rem;
+
+    color: white;
 }
 
-.about {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./Assets/about3.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff;
+.heroVisual {
+    flex: 1;
+    display: flex;
     justify-content: center;
 }
 
-.aboutTop {
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
-    margin-left: 20px;
-
-}
-
-.aboutTop h2 {
-    font-size: 40px;
-    margin-left: 40px;
-    margin-top: 50px;
-    font-weight: bold;
-}
-
-.aboutTop p {
-    padding: 10px;
-    margin-top: 50px;
+.heroVisual img {
+    width: 100%;
     max-width: 550px;
-}
-
-.aboutContent img {
-    border: #00ddff solid 2px;
-    margin-left: 40px;
-}
-
-
-.aboutContentBottom {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    padding: 40px;
-}
-
-.abt1 {
-    width: 60%;
-    height: 400px;
-    object-fit: cover;
     border-radius: 20px;
 }
 
-.abt2 {
-    width: 30%;
-    height: 550px;
-    object-fit: cover;
-    border-radius: 30px;
-} */
+.heroContent {
+    flex: 1;
+    max-width: 600px;
+}
+
+.heroContent h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.heroContent p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
 
 .trust {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./Assets/blackhole.webp");
@@ -357,6 +292,7 @@
     align-items: center;
     padding: 60px 10%;
     position: relative;
+    margin-bottom: 80px;
 }
 
 .abt1 {
@@ -364,18 +300,16 @@
     height: 420px;
     object-fit: cover;
     border-radius: 20px;
-    z-index: 2;
+    z-index: 1;
     transition: 0.4s;
+    margin-right: 50px;
 }
 
 .abt2 {
-    width: 25%;
+    width: 35%;
     height: 500px;
     object-fit: cover;
     border-radius: 20px;
-    position: absolute;
-    right: 10%;
-    top: 40px;
     z-index: 3;
     box-shadow: 0 0 30px rgba(0, 221, 255, 0.3);
     transition: 0.4s;
@@ -440,7 +374,8 @@
 }
 
 input[type="text"] {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     padding: 12px;
     margin: 8px 0 20px;
     border: 1px solid aqua;
@@ -448,7 +383,8 @@ input[type="text"] {
 }
 
 input[type="email"] {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     padding: 12px;
     margin: 8px 0 20px;
     border: 1px solid aqua;
@@ -456,7 +392,8 @@ input[type="email"] {
 }
 
 input[type="number"] {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     padding: 12px;
     margin: 8px 0 20px;
     border: 1px solid aqua;
@@ -464,7 +401,8 @@ input[type="number"] {
 }
 
 input[type="textarea"] {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 100px;
     padding: 12px;
     margin: 8px 0 20px;
@@ -587,4 +525,174 @@ input[type="textarea"] {
 .navLinks a.active {
     color: #ffffff;
     border-bottom: 2px solid aqua;
+}
+
+/* =================================
+   TABLETS
+================================= */
+@media (max-width: 992px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 5rem 6%;
+    }
+
+    .heroContent {
+        align-items: center;
+        max-width: 700px;
+    }
+
+    .heroContent h1 {
+        font-size: 3rem;
+    }
+
+    .heroBtnGrp {
+        justify-content: center;
+    }
+
+    .aboutTop {
+        flex-direction: column;
+        text-align: center;
+        padding: 70px 6% 40px;
+    }
+
+    .aboutContentBottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 0 6% 70px;
+    }
+
+    .abt1,
+    .abt2 {
+        width: 100%;
+        height: 350px;
+        position: static;
+        margin: 0;
+    }
+
+    .contact-body .container {
+        flex-direction: column;
+    }
+
+    .form-fields,
+    .form-buttons,
+    .form-col p {
+        margin-left: 0;
+    }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .menuToggle {
+        display: block;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .navLinks {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background: black;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 25px;
+
+        padding: 30px 0;
+
+        display: none;
+    }
+
+    .navLinks.active {
+        display: flex;
+    }
+
+    /* HERO */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 5%;
+    }
+
+    .heroContent {
+        align-items: center;
+    }
+
+    .heroContent h1 {
+        font-size: 2.5rem;
+    }
+
+    .heroBtnGrp {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .heroBtnPrimary {
+        width: auto;
+    }
+
+    /* TRUST */
+    .testimo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimoContent {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* ABOUT */
+    .aboutContentBottom {
+        grid-template-columns: 1fr;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .heroContent h1 {
+        font-size: 2rem;
+    }
+
+    .heroBtnGrp {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .heroBtnPrimary {
+        width: 100%;
+    }
+
+    .aboutTop h2,
+    .trustContent h2,
+    .contact-body h2 {
+        font-size: 2rem;
+    }
 }

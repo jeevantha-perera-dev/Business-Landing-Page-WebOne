@@ -205,6 +205,7 @@ img {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    justify-content: center;
 }
 
 .testimoContent::before {
@@ -234,6 +235,8 @@ img {
     width: 70px;
     height: 70px;
     margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
 .trustContent p {

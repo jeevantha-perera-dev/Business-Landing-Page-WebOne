@@ -11,6 +11,17 @@ mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log('Successfully connected to MongoDB!'))
     .catch((error) => console.error('Error connecting to MongoDB', error));
 
+const contactSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    number: { type: String, required: true },
+    message: { type: String, required: true },
+    date: { type: Date, default: Date.now }
+});
+
+const Contact = mongoose.model('contact', contactSchema);
+
+
 app.use(cors());
 app.use(express.json());
 
@@ -18,16 +29,29 @@ app.get("/", (req, res) => {
     res.send("Hello World!");
 });
 
-app.post('/api/contact', (req, res) => {
-    const formData = req.body;
-    console.log("New message recieves!");
-    console.log("Name:", formData.name);
-    console.log("Email:", formData.email);
-    console.log("Phone:", formData.number);
-    console.log("Message:", formData.message);
+app.post('/api/contact', async (req, res) => {
+    try {
+        const formData = req.body;
+        console.log("New message recieves!");
 
-    res.json({ success: true, message: "Thank you! Message recieved." });
-})
+        const newMessage = new Contact({
+            name: formData.name,
+            email: formData.email,
+            number: formData.number,
+            message: formData.message
+        });
+
+        await newMessage.save();
+
+        console.log("Successfully saved to MongoDB!");
+        res.json({ success: true, message: "Thank you! Your message has been saved." });
+    }
+
+    catch (error) {
+        console.error("Error saving to database:", error);
+        res.status(500).json({ success: false, message: "There was an error saving your message." });
+    }
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

@@ -1,0 +1,24 @@
+{
+  "name": "webapp1",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeevantha-perera-dev/Business-Landing-Page-WebOne.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeevantha-perera-dev/Business-Landing-Page-WebOne/issues"
+  },
+  "homepage": "https://github.com/jeevantha-perera-dev/Business-Landing-Page-WebOne#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}

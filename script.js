@@ -51,8 +51,31 @@ function submitForm(event) {
 
     } else {
 
-        document.getElementById("demo").innerHTML =
-            `Thank you for contacting us, ${name}!`;
+        const formData = {
+            name: name,
+            email: email,
+            number: number,
+            message: message
+        };
+
+        document.getElementById("demo").innerHTML = "Sending message......";
+
+        fetch('http://localhost:3000/api/contact', {
+            method: 'POST',
+            headers: {
+                'content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        }).then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById("demo").innerHTML = data.message;
+                    document.getElementById("form-id").reset();
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                document.getElementById("demo").innerHTML = "There was an error sending the message. Please try again later.";
+            });
     }
 }
 

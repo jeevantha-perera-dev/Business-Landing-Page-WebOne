@@ -19,7 +19,7 @@ app.post('/api/contact', (req, res) => {
     console.log("Phone:", formData.number);
     console.log("Message:", formData.message);
 
-    res.jsonp({ success: true, message: "Thank you! Message recieved." });
+    res.json({ success: true, message: "Thank you! Message recieved." });
 })
 
 app.listen(PORT, () => {
